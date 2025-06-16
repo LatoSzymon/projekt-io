@@ -23,5 +23,10 @@ if os.path.exists(out):
 
 df["eevvgg_sentiment"] = df["comment_text"].apply(analyze)
 
-df.to_csv(out, index=False)
-print("aejfieovjirsgoprsgofkoopekfokea")
+original = pd.read_csv("full_comments.csv")[["comment_id", "phase"]]
+df = df.merge(original, on="comment_id", how="left")
+
+df.to_csv("full_comments_eevvgg.csv", index=False)
+print("ANALIZA EEVVGG ZAKOŃCZONA")
+
+

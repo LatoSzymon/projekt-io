@@ -24,6 +24,8 @@ if os.path.exists("full_comments_analyzed_1.csv"):
      
 df["political_sentiment"] = df["comment_text"].apply(analiza)
 
+original = pd.read_csv("full_comments.csv")[["comment_id", "phase"]]
+df = df.merge(original, on="comment_id", how="left")
 
 df.to_csv("full_comments_analyzed_1.csv", index=False)
-print("ANAL I ZA SKOŃCZONA")
+print("ANALIZA PaReS ZAKOŃCZONA")
