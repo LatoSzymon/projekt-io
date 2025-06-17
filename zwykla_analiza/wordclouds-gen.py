@@ -1,11 +1,8 @@
 import pandas as pd
-import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import re
-from nltk.corpus import stopwords
 
-nltk.download("stopwords")
 polish_stopwords = set("""
 a które jako bez prostu który tych cię tyrant https tym czasu simiona może tyle jakoś reddit można lat chce takie która pjpg auto preview sie będą aby ach aj albo ale tym ani aż bardzo bo bowiem by był była było byli być ci cie ciebie co cokolwiek coś czy czyli daleko dla dlaczego dlatego do dobrze dokąd dość dużo gdzie go gdy gdyby gdyż i ich ile im inna inne inny iż ja jak jakaś jakiś ją je jeden jednak jego jej jemu jest jestem jeszcze jeśli już ją każdy kiedy kim kto ku lecz lub ma mają mam mnie mogą moje moim musi my na nad nam nami nas nasze nasz naście natomiast natychmiast nawet ni niż nic nich nie niej nią nim nimi niż no o obok od około on ona one oni ono oraz oto ponieważ pod podczas potem poza prawie przecież przed przede przez przy roku sama same samemu sobie sobą są ta tak taka taki tam te tego tej ten teraz też to tobą tobie tutaj tu twoi twoim twój ty u w wam was wasz wasza wasze we więc więcej wiele wszyscy wszystko wszystkie wszystkich się z za zawsze ze siebie sobie sobą że żeby
 """.split())

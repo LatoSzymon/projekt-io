@@ -28,8 +28,8 @@ def prepare_model_data(tagged_df, model_df, sentiment_column, model_name):
     
     output_file = f"poll_results_{model_name.lower()}.csv"
     grouped.to_csv(output_file, index=False)
-    print(f"✅ Wyniki zapisane: {output_file}")
+    print(f"Wyniki zapisane: {output_file}")
 
 prepare_model_data(tagged, pares, "political_sentiment", "PaReS")
 
-prepare_model_data(tagged, vader, "vades_sentiment", "VADER")
+prepare_model_data(tagged, vader, "vader_sentiment", "VADER")
